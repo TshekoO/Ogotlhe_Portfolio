@@ -305,18 +305,23 @@
             }
         }
     </script>
+     <!-- Chatbot toggle button -->
+     <button class="toggle-btn" id="open-chatbot">
+        <i class="ri-robot-3-fill"></i>
+    </button>
     <!-- Chatbot container -->
-    <div class="chat-container">
+    <div id="chat-container" >
         <div class="chat-header">
             <h3>Chatbot</h3>
-            <button class="toggle-btn" onclick="toggleChat()">✖</button>
+            <button id="close-button">✖</button>
         </div>
-        <div class="chat-body" id="chat-body">
+        <div id="chat-body">
             <div class="bot-message">Hello! How can I help you today?</div>
         </div>
-        <div class="chat-footer" id="chat-footer">
+        <div id="chat-footer">
             <input type="text" id="user-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
-            <button onclick="sendMessage()">Send</button>
+            <button id="send-button" onclick="sendMessage()">Send</button>
+            <button id="clear-button" onclick="clearChat()">Clear Chat</button>
         </div>
     </div>
     <script src="chatbot/chat.js"></script>
