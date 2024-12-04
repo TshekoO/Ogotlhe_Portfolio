@@ -9,6 +9,8 @@
         </title>
         <link rel = "stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/bea53ffddf.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    </head>
     </head>
     <body>
      <section id="header"> 
@@ -23,7 +25,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="images/ogotlhe tsheko resume (1).pdf">Resume</a></li>
+                    <li><a href="images/Ogotlhe Tsheko CV (1).pdf">Resume</a></li>
                 </ul>
             </nav>
         </div>
@@ -168,7 +170,7 @@
                     <h3>Travel Website</h3>
                     <p>The Website is created to help families by creating an itinerary for their dream vacation and ensure each activity is suited for them.</p>
                 </br>
-                    <button onclick="window.location.href='Travel2/index.html'"><i class="fa-solid fa-up-right-from-square"></i></button>
+                    <button onclick="window.location.href='Travel/index.html'"><i class="fa-solid fa-up-right-from-square"></i></button>
                     <p>Press button to view Project</p>
                 </div>
             </div>
@@ -188,7 +190,7 @@
                     <h3>Real-Estate Website</h3>
                     <p>The Website is created to help individuals as well as businesses to find, build, and renovate their dream home.</p>
                 </br>
-                    <button onclick="window.location.href='Projects/onyx xampp/onyx/index.html'"><i class="fa-solid fa-up-right-from-square"></i></button>
+                    <button onclick="window.location.href='Onyx/index.html'"><i class="fa-solid fa-up-right-from-square"></i></button>
                     <p>Press button to view Project</p>
                 </div>
             </div>
@@ -210,7 +212,7 @@
                 <a href="https://github.com/TshekoO"><i class="fa-brands fa-github"></i></a>
                 <a href="https://linkedIn.com/in/ogotlhe-tsheko"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-             <a href="images/ogotlhe tsheko resume (1).pdf" class="btn btn2">Download CV</a>
+             <a href="images/Ogotlhe Tsheko CV (1).pdf" class="btn btn2">Download CV</a>
             </div>
         
         <div class="contact-right">
@@ -305,21 +307,26 @@
             }
         }
     </script>
+     <!-- Chatbot toggle button -->
+     <button class="toggle-btn" id="open-chatbot">
+        <i class="ri-robot-3-fill"></i>
+    </button>
     <!-- Chatbot container -->
-    <div class="chat-container">
+    <div id="chat-container" >
         <div class="chat-header">
             <h3>Chatbot</h3>
-            <button class="toggle-btn" onclick="toggleChat()">✖</button>
+            <button id="close-button">✖</button>
         </div>
-        <div class="chat-body" id="chat-body">
+        <div id="chat-body">
             <div class="bot-message">Hello! How can I help you today?</div>
         </div>
-        <div class="chat-footer" id="chat-footer">
+        <div id="chat-footer">
             <input type="text" id="user-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
-            <button onclick="sendMessage()">Send</button>
+            <button id="send-button" onclick="sendMessage()">Send</button>
+            <button id="clear-button" onclick="clearChat()">Clear Chat</button>
         </div>
     </div>
-    <script src="chatbot/chat.js"></script>
+    <script src="chat.js"></script>
     <script>
         function openTab(tabName) {
             const tabLinks = document.querySelectorAll('.tab-links');
