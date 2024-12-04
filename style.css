@@ -662,7 +662,7 @@ socials a:hover {
 }
 
 /* Chatbot styles */
-.chat-container {
+#chat-container {
     display: flex;
     flex-direction: column;
     height: 400px;
@@ -685,38 +685,35 @@ socials a:hover {
     align-items: center;
     padding: 10px;
     background-color: #000000;
-    color: #ffffff
+    color: #ffffff;
 }
 
-.chat-body {
-    padding: 10px;
-    height: 200px;
-    overflow-y: auto;
-    background: #f9f9f9;
-}
-
-.chat-footer {
+#chat-body {
     flex: 1;
     padding: 10px;
     overflow-y: auto;
     background-color: #f9f9f9;
 }
+
 .user-message, .bot-message {
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
     max-width: 80%;
 }
+
 .user-message {
     background-color: #042c1a;
     align-self: flex-end;
     text-align: right;
 }
+
 .bot-message {
     background-color: #000000;
     align-self: flex-start;
     text-align: left;
 }
+
 #chat-footer {
     display: flex;
     padding: 10px;
@@ -726,6 +723,7 @@ socials a:hover {
     bottom: 0;
     width: 100%;
 }
+
 #user-input {
     flex: 1;
     padding: 10px;
@@ -733,6 +731,7 @@ socials a:hover {
     border-radius: 5px;
     margin-right: 10px;
 }
+
 #send-button, #clear-button {
     padding: 10px 20px;
     border: none;
@@ -742,9 +741,11 @@ socials a:hover {
     cursor: pointer;
     margin-left: 5px; /* Add margin between buttons */
 }
+
 #clear-button {
     background-color: #46080e; /* Red color for clear button */
 }
+
 .toggle-btn {
     position: fixed;
     bottom: 20px;
@@ -761,11 +762,10 @@ socials a:hover {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .toggle-btn i {
     font-size: 24px;
 }
-
-
 
 /* Responsive styles for small screens */
 @media screen and (max-width: 768px) {
