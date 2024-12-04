@@ -12,3 +12,4 @@ The following Projects list below are the one's that I have designed for differe
 3. Tic-Tac-Toe_Game - Players take turns putting their marks in empty squares. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.</br>
 4. Real-Estate Website - The website is designed to help families and individuals to find,build and renovate their dream homes. I used HTML,CSS and Mysql to store the data.
 # Link to My- Personal Portfolio
+tshekoo.github.io/Ogotlhe_Portfolio/
