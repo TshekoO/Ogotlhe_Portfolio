@@ -735,7 +735,7 @@ socials a:hover {
 #user-input {
     flex: 1;
     padding: 10px;
-    border: 1px solid #1a4103;
+    border: 1px solid #ad4a1c;
     border-radius: 5px;
     margin-right: 10px;
 }
@@ -791,6 +791,7 @@ socials a:hover {
         margin-top: -70px;
       
     }
+    
 .heading{
     font-size: 20px;
 }
@@ -836,6 +837,33 @@ socials a:hover {
         top: 0;
         left: 0;
     }
+    #user-input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #1a4103;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+  .header-text{
+    position: absolute;
+    top: 450px;
+  }
+  #chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Enable vertical scrolling */
+}
 
     .icon-container {
         display: flex;
@@ -843,7 +871,10 @@ socials a:hover {
         gap: 20px;
         margin-left: 0;
     }
-
+.circle-image{
+    position: absolute;
+    top: 200px;
+}
     .icon {
         text-align: center;
         font-size: 50px;
@@ -874,6 +905,7 @@ socials a:hover {
     }
 
     .circle-image {
+        top: 50px;
         width: 300px;
         height: 300px;
     }

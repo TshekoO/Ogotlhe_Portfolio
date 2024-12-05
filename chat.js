@@ -55,7 +55,7 @@ function getBotResponse(userInput) {
 
     if (userInput.includes('hello') || userInput.includes('hi')) {
         return "Hello! How can I assist you today?";
-    } else if (userInput.includes('what are you')) {
+    } else if (userInput.includes('what are you?')) {
         return "I'm just a bot, but I'm here to help you!";
     } else if (userInput.includes('what is your name')) {
         return "I'm Chatbot created by Ogotlhe, your virtual assistant.";
@@ -66,9 +66,11 @@ function getBotResponse(userInput) {
     } else if (userInput.includes('projects') || userInput.includes('work')) {
         return `
             Here are some of my works:
-            1. Travel Website: The Website is created to help families by creating an itinerary for their dream vacation and ensure each activity is suited for them. <a href="Travel/index.html">View Project</a>
-            2. Tic-Tac-Toe Game: Tic Tac Toe is a simple, classic game for two players that involves a 3x3 grid. <a href="index2.html">View Project</a>
-            3. Real-Estate Website: The Website is to help individuals as well as businesses to find, build, and renovate their dream home. <a href="Onyx/index.html">View Project</a>
+            1. Travel Website:  <a href="Travel/index.html">View Project</a>
+
+            2. Tic-Tac-Toe Game:  <a href="index2.html">View Project</a>
+
+            3. Real-Estate Website:  <a href="Onyx/index.html">View Project</a>
         `;
     } else {
         return "I'm not sure I understand. Can you please elaborate?";

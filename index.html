@@ -293,6 +293,46 @@
   });
 });
       </script>
+        <script>
+            //Navbar
+            function toggleMenu() {
+            const navbarLinks = document.getElementById("navbarLinks");
+            const menuToggle = document.querySelector(".menu-toggle");
+            
+            if (navbarLinks.classList.contains("show")) {
+                // Closing animation
+                navbarLinks.style.opacity = "0";
+                navbarLinks.style.transform = "translateY(-20px)";
+                menuToggle.classList.remove("active");
+                setTimeout(() => {
+                    navbarLinks.classList.remove("show");
+                }, 300);
+            } else {
+                // Opening animation
+                navbarLinks.classList.add("show");
+                navbarLinks.style.opacity = "1";
+                navbarLinks.style.transform = "translateY(0)";
+                menuToggle.classList.add("active");
+            }
+        
+            // Add click event listeners to all navbar links
+            document.querySelectorAll('.navbar-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarLinks = document.getElementById("navbarLinks");
+                const menuToggle = document.querySelector(".menu-toggle");
+                
+                // Close the menu
+                navbarLinks.style.opacity = "0";
+                navbarLinks.style.transform = "translateY(-20px)";
+                menuToggle.classList.remove("active");
+                
+                setTimeout(() => {
+                    navbarLinks.classList.remove("show");
+                }, 300);
+            });
+        });
+        }
+        </script>
         
       <script>
         function toggleMenu() {
