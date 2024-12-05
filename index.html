@@ -13,13 +13,14 @@
     </head>
     </head>
     <body>
-     <section id="header"> 
-        <div class = "container">
-    
-            <nav class="navbar">
-                <img src="images/logo_trial__1_-removebg-preview.png" class="logo">
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-                <ul id="sidemenu">
+        <div class="navbar">
+            <nav class="navbar-brand">
+                <a href="index.html" class="brand-link"><img src="images/logo_trial__1_-removebg-preview.png" class="logo" alt="Logo"></a>
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <span class="menu-icon">☰</span>
+                    <span class="close-icon" style="display: none;">✕</span>
+                </button>
+                <ul class="navbar-links" id="navbarLinks">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
@@ -29,6 +30,10 @@
                 </ul>
             </nav>
         </div>
+
+     <section id="header"> 
+        
+        
             <div class="container1">
             <div class="circle-image">
               <img src="images/pt1.jpg" alt="Circular Image">
@@ -334,19 +339,50 @@
         }
         </script>
         
-      <script>
-        function toggleMenu() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const sidemenu = document.getElementById('sidemenu');
-            sidemenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-            if (menuToggle.classList.contains('active')) {
-                menuToggle.textContent = '✖';
+
+        <script>
+            //Navbar
+            function toggleMenu() {
+            const navbarLinks = document.getElementById("navbarLinks");
+            const menuToggle = document.querySelector(".menu-toggle");
+            
+            if (navbarLinks.classList.contains("show")) {
+                // Closing animation
+                navbarLinks.style.opacity = "0";
+                navbarLinks.style.transform = "translateY(-20px)";
+                menuToggle.classList.remove("active");
+                setTimeout(() => {
+                    navbarLinks.classList.remove("show");
+                }, 300);
             } else {
-                menuToggle.textContent = '☰';
+                // Opening animation
+                navbarLinks.classList.add("show");
+                navbarLinks.style.opacity = "1";
+                navbarLinks.style.transform = "translateY(0)";
+                menuToggle.classList.add("active");
             }
+        
+            // Add click event listeners to all navbar links
+            document.querySelectorAll('.navbar-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarLinks = document.getElementById("navbarLinks");
+                const menuToggle = document.querySelector(".menu-toggle");
+                
+                // Close the menu
+                navbarLinks.style.opacity = "0";
+                navbarLinks.style.transform = "translateY(-20px)";
+                menuToggle.classList.remove("active");
+                
+                setTimeout(() => {
+                    navbarLinks.classList.remove("show");
+                }, 300);
+            });
+        });
         }
-    </script>
+        </script>
+
+
+
      <!-- Chatbot toggle button -->
      <button class="toggle-btn" id="open-chatbot">
         <i class="ri-robot-3-fill"></i>
