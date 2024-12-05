@@ -87,6 +87,7 @@ body {
     color: #ffffff;
     font-size: 1em;
     transition: color 0.3s;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .navbar-links li a:hover {

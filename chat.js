@@ -63,6 +63,12 @@ function getBotResponse(userInput) {
         return "Sure, I'm here to help! What do you need assistance with?";
     } else if (userInput.includes('bye')) {
         return "Goodbye! Have a great day!";
+    } else if (userInput.includes('contact' || userInput.includes('contact details '))) {
+        return "Goodbye! Have a great day!";
+    } else if (userInput.includes('skills')) {
+        return "Goodbye! Have a great day!";
+    } else if (userInput.includes('links')) {
+        return "Goodbye! Have a great day!"; 
     } else if (userInput.includes('projects') || userInput.includes('work')) {
         return `
             Here are some of my works:
