@@ -51,11 +51,11 @@ function getCurrentTime() {
 }
 
 function getBotResponse(userInput) {
-    userInput = userInput.toLowerCase(); // Convert user input to lowercase for case-insensitive matching
+    userInput = userInput.toLowerCase().trim(); // Convert to lowercase and trim whitespace
 
     if (userInput.includes('hello') || userInput.includes('hi')) {
         return "Hello! How can I assist you today?";
-    } else if (userInput.includes('what are you?')) {
+    } else if (userInput.includes('what are you')) {
         return "I'm just a bot, but I'm here to help you!";
     } else if (userInput.includes('what is your name')) {
         return "I'm Chatbot created by Ogotlhe, your virtual assistant.";
@@ -63,25 +63,22 @@ function getBotResponse(userInput) {
         return "Sure, I'm here to help! What do you need assistance with?";
     } else if (userInput.includes('bye')) {
         return "Goodbye! Have a great day!";
-    } else if (userInput.includes('contact' || userInput.includes('contact details '))) {
-        return "Goodbye! Have a great day!";
+    } else if (userInput.includes('contact') || userInput.includes('contact details')) {
+        return "You can reach out to Ogotlhe at tshekoogotlhe101@gmail.com or call +27 60 655 4297.";
     } else if (userInput.includes('skills')) {
-        return "Goodbye! Have a great day!";
-    } else if (userInput.includes('links')) {
-        return "Goodbye! Have a great day!"; 
+        return "Ogotlhe's skills include web development (HTML, CSS, JavaScript), and IT infrastructure management (DNS, Active Directory, etc.).";
     } else if (userInput.includes('projects') || userInput.includes('work')) {
         return `
             Here are some of my works:
-            1. Travel Website:  <a href="Travel/index.html">View Project</a>
-
-            2. Tic-Tac-Toe Game:  <a href="index2.html">View Project</a>
-
-            3. Real-Estate Website:  <a href="Onyx/index.html">View Project</a>
+            1. Travel Website: <a href="Travel/index.html" target="_blank">View Project</a><br>
+            2. Tic-Tac-Toe Game: <a href="index2.html" target="_blank">View Project</a><br>
+            3. Real-Estate Website: <a href="Onyx/index.html" target="_blank">View Project</a>
         `;
     } else {
         return "I'm not sure I understand. Can you please elaborate?";
     }
 }
+
 
 // Initialize chat container display and add event listener to the button
 document.addEventListener('DOMContentLoaded', () => {
