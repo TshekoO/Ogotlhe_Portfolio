@@ -1,16 +1,16 @@
 function toggleChat() {
-    const chatContainer = document.getElementById('chat-container');
-    const openBtn = document.getElementById('open-chatbot');
-    const closeBtn = document.getElementById('close-button');
+    const chatBody = document.getElementById('chat-body');
+    const chatFooter = document.getElementById('chat-footer');
+    const toggleBtn = document.querySelector('.toggle-btn');
 
-    if (chatContainer.style.display === 'none' || chatContainer.style.display === '') {
-        chatContainer.style.display = 'block';
-        openBtn.style.display = 'none';
-        closeBtn.style.display = 'block';
+    if (chatBody.style.display === 'none') {
+        chatBody.style.display = 'block';
+        chatFooter.style.display = 'flex';
+        toggleBtn.textContent = '✖';
     } else {
-        chatContainer.style.display = 'none';
-        openBtn.style.display = 'block';
-        closeBtn.style.display = 'none';
+        chatBody.style.display = 'none';
+        chatFooter.style.display = 'none';
+        toggleBtn.textContent = '▼';
     }
 }
 
@@ -27,12 +27,12 @@ function sendMessage() {
     if (userInput.value.trim() !== '') {
         const userMessage = document.createElement('div');
         userMessage.className = 'user-message';
-        userMessage.textContent = `${getCurrentTime()} - ${userInput.value}`;
+        userMessage.textContent = userInput.value;
         chatBody.appendChild(userMessage);
 
         const botMessage = document.createElement('div');
         botMessage.className = 'bot-message';
-        botMessage.innerHTML = `${getCurrentTime()} - ${getBotResponse(userInput.value)}`;
+        botMessage.textContent = 'You said: ' + userInput.value;
         chatBody.appendChild(botMessage);
 
         userInput.value = '';
@@ -40,52 +40,7 @@ function sendMessage() {
     }
 }
 
-function clearChat() {
-    const chatBody = document.getElementById('chat-body');
-    chatBody.innerHTML = '';
-}
-
-function getCurrentTime() {
-    const now = new Date();
-    return now.toLocaleTimeString();
-}
-
-function getBotResponse(userInput) {
-    userInput = userInput.toLowerCase(); // Convert user input to lowercase for case-insensitive matching
-
-    if (userInput.includes('hello') || userInput.includes('hi')) {
-        return "Hello! How can I assist you today?";
-    } else if (userInput.includes('what are you')) {
-        return "I'm just a bot, but I'm here to help you!";
-    } else if (userInput.includes('what is your name')) {
-        return "I'm Chatbot created by Ogotlhe, your virtual assistant.";
-    } else if (userInput.includes('help')) {
-        return "Sure, I'm here to help! What do you need assistance with?";
-    } else if (userInput.includes('bye')) {
-        return "Goodbye! Have a great day!";
-    } else if (userInput.includes('projects') || userInput.includes('work')) {
-        return `
-            Here are some of my works:
-            1. Travel Website: The Website is created to help families by creating an itinerary for their dream vacation and ensure each activity is suited for them. <a href="Travel/index.html">View Project</a>
-            2. Tic-Tac-Toe Game: Tic Tac Toe is a simple, classic game for two players that involves a 3x3 grid. <a href="index2.html">View Project</a>
-            3. Real-Estate Website: The Website is to help individuals as well as businesses to find, build, and renovate their dream home. <a href="Onyx/index.html">View Project</a>
-        `;
-    } else {
-        return "I'm not sure I understand. Can you please elaborate?";
-    }
-}
-
-// Initialize chat container display and add event listener to the button
+// Initialize chat container display
 document.addEventListener('DOMContentLoaded', () => {
-    const chatContainer = document.getElementById('chat-container');
-    chatContainer.style.display = 'none'; // Ensure chat container is hidden initially
-
-    const openBtn = document.getElementById('open-chatbot');
-    openBtn.addEventListener('click', toggleChat); // Add event listener to the open button
-
-    const closeBtn = document.getElementById('close-button');
-    closeBtn.addEventListener('click', toggleChat); // Add event listener to the close button
-
-    document.getElementById('send-button').addEventListener('click', sendMessage);
-    document.getElementById('clear-button').addEventListener('click', clearChat);
+    document.querySelector('.chat-container').style.display = 'flex';
 });
