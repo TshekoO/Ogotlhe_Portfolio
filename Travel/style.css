@@ -32,7 +32,7 @@ body {
     margin-top: -20px; /* Adjust this value as needed */
 }
 
-nav {
+nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -144,7 +144,7 @@ nav ul li a:hover::after {
     max-width: 100%;
     max-height: 100%;
 }
-
+ 
 .image2 {
     position: absolute;
     top: 1040px;

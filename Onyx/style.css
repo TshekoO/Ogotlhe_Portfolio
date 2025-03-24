@@ -52,7 +52,7 @@ body .index{
   top: 20px;
 }
 .box{
-   background: #fdfdfd;
+   background: rgba(253, 253, 253, 0.5); /* 0.5 is the alpha value for 50% transparency */
    display: flex;
    flex-direction: column;
    padding: 25px 25px;
@@ -218,7 +218,7 @@ nav ul li a:hover::after{
     padding: 40px 0;
    
 }
-.img{
+.image1 img{
     align-items: center;
 }
 .about-text h1{
@@ -280,7 +280,7 @@ nav ul li a:hover::after{
    
     position: relative;
     top: 0;
-    left: 600px;
+    left: 350px;
     border: 1px solid #000000;
     max-width: 90%;
     max-height: 90%;
@@ -356,7 +356,7 @@ transform: translateY(-10px);
 }
 .work-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     grid-gap: 40px;
     margin-top: 50px; 
 }
